@@ -1,0 +1,48 @@
+Mar 26 02:52:49 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'job',  'action' => 'index',)
+Mar 26 02:52:50 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /category/index with parameters array (  'module' => 'category',  'action' => 'index',)
+Mar 26 02:52:53 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Mar 26 02:52:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 26 02:52:53 symfony [info] {categoryActions} Call "categoryActions->executeIndex()"
+Mar 26 02:52:53 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 26 02:52:53 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 26 02:52:53 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM jobeet_category j - ()
+Mar 26 02:52:53 symfony [info] {sfPHPView} Render "/var/www/jobeet/cache/backend/test/modules/autoCategory/templates/indexSuccess.php"
+Mar 26 02:52:53 symfony [info] {sfPartialView} Render "/var/www/jobeet/cache/backend/test/modules/autoCategory/templates/_assets.php"
+Mar 26 02:52:53 symfony [info] {sfPartialView} Render "/var/www/jobeet/cache/backend/test/modules/autoCategory/templates/_flashes.php"
+Mar 26 02:52:53 symfony [info] {sfPartialView} Render "/var/www/jobeet/cache/backend/test/modules/autoCategory/templates/_list_header.php"
+Mar 26 02:52:53 symfony [info] {sfPartialView} Render "/var/www/jobeet/cache/backend/test/modules/autoCategory/templates/_list.php"
+Mar 26 02:52:53 symfony [info] {sfPartialView} Render "/var/www/jobeet/cache/backend/test/modules/autoCategory/templates/_list_batch_actions.php"
+Mar 26 02:52:54 symfony [info] {sfPartialView} Render "/var/www/jobeet/cache/backend/test/modules/autoCategory/templates/_list_actions.php"
+Mar 26 02:52:54 symfony [info] {sfPartialView} Render "/var/www/jobeet/cache/backend/test/modules/autoCategory/templates/_list_footer.php"
+Mar 26 02:52:54 symfony [info] {sfPHPView} Decorate content with "/var/www/jobeet/apps/backend/templates/layout.php"
+Mar 26 02:52:54 symfony [info] {sfPHPView} Render "/var/www/jobeet/apps/backend/templates/layout.php"
+Mar 26 02:52:54 symfony [info] {sfWebResponse} Send content (1904 o)
+Mar 26 02:52:56 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'job',  'action' => 'index',)
+Mar 26 02:52:58 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /job/index with parameters array (  'module' => 'job',  'action' => 'index',)
+Mar 26 02:53:00 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Mar 26 02:53:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 26 02:53:00 symfony [info] {jobActions} Call "jobActions->executeIndex()"
+Mar 26 02:53:00 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 26 02:53:00 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 26 02:53:00 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM (SELECT j.id FROM jobeet_job j LEFT JOIN jobeet_category j2 ON j.category_id = j2.id GROUP BY j.id) dctrn_count_query - ()
+Mar 26 02:53:00 symfony [info] {sfPHPView} Render "/var/www/jobeet/cache/backend/test/modules/autoJob/templates/indexSuccess.php"
+Mar 26 02:53:01 symfony [info] {sfPartialView} Render "/var/www/jobeet/cache/backend/test/modules/autoJob/templates/_assets.php"
+Mar 26 02:53:01 symfony [info] {sfPartialView} Render "/var/www/jobeet/cache/backend/test/modules/autoJob/templates/_flashes.php"
+Mar 26 02:53:01 symfony [info] {sfPartialView} Render "/var/www/jobeet/cache/backend/test/modules/autoJob/templates/_list_header.php"
+Mar 26 02:53:01 symfony [info] {sfPartialView} Render "/var/www/jobeet/cache/backend/test/modules/autoJob/templates/_filters.php"
+Mar 26 02:53:01 symfony [info] {sfPartialView} Render "/var/www/jobeet/cache/backend/test/modules/autoJob/templates/_filters_field.php"
+Mar 26 02:53:01 symfony [info] {Doctrine_Connection_Mysql} query : SELECT j.id AS j__id, j.name AS j__name, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_category j - ()
+Mar 26 02:53:01 symfony [info] {sfPartialView} Render "/var/www/jobeet/cache/backend/test/modules/autoJob/templates/_filters_field.php"
+Mar 26 02:53:01 symfony [info] {sfPartialView} Render "/var/www/jobeet/cache/backend/test/modules/autoJob/templates/_filters_field.php"
+Mar 26 02:53:01 symfony [info] {sfPartialView} Render "/var/www/jobeet/cache/backend/test/modules/autoJob/templates/_filters_field.php"
+Mar 26 02:53:01 symfony [info] {sfPartialView} Render "/var/www/jobeet/cache/backend/test/modules/autoJob/templates/_filters_field.php"
+Mar 26 02:53:01 symfony [info] {sfPartialView} Render "/var/www/jobeet/cache/backend/test/modules/autoJob/templates/_filters_field.php"
+Mar 26 02:53:01 symfony [info] {sfPartialView} Render "/var/www/jobeet/cache/backend/test/modules/autoJob/templates/_filters_field.php"
+Mar 26 02:53:01 symfony [info] {sfPartialView} Render "/var/www/jobeet/cache/backend/test/modules/autoJob/templates/_filters_field.php"
+Mar 26 02:53:01 symfony [info] {sfPartialView} Render "/var/www/jobeet/cache/backend/test/modules/autoJob/templates/_list.php"
+Mar 26 02:53:01 symfony [info] {sfPartialView} Render "/var/www/jobeet/cache/backend/test/modules/autoJob/templates/_list_batch_actions.php"
+Mar 26 02:53:01 symfony [info] {sfPartialView} Render "/var/www/jobeet/cache/backend/test/modules/autoJob/templates/_list_actions.php"
+Mar 26 02:53:01 symfony [info] {sfPartialView} Render "/var/www/jobeet/cache/backend/test/modules/autoJob/templates/_list_footer.php"
+Mar 26 02:53:01 symfony [info] {sfPHPView} Decorate content with "/var/www/jobeet/apps/backend/templates/layout.php"
+Mar 26 02:53:01 symfony [info] {sfPHPView} Render "/var/www/jobeet/apps/backend/templates/layout.php"
+Mar 26 02:53:01 symfony [info] {sfWebResponse} Send content (10717 o)

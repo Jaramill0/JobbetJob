@@ -1,0 +1,48 @@
+version: "3.7"
+
+services:
+    jobeet-apache:
+        container_name: php-apache
+        build:
+            context: ./docker/apache
+            dockerfile: Dockerfile
+        working_dir: /var/www/jobeet
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
+        depends_on:
+            - jobeet-db
+        restart: always
+        volumes:
+            - ./docker/apache/welante.conf:/etc/apache2/sites-available/000-default.conf
+            - .:/var/www/jobeet
+        ports:
+            - 8000:80
+
+    jobeet-phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        ports:
+            - 8081:80
+        restart: always
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
+        environment:
+            PMA_HOST: jobeet-db
+        depends_on:
+            - jobeet-db
+
+    jobeet-db:
+        container_name: jobeet-db
+        image: mariadb:10.1.46
+        restart: always
+        environment:
+            MYSQL_USER: jobeet
+            MYSQL_PASSWORD: jobeet
+            MYSQL_DATABASE: jobeet
+            MYSQL_ROOT_PASSWORD: jobeet+pw
+        volumes:
+            - jobeet-db-data:/var/lib/mysql
+        ports:
+            - 8002:3306
+
+volumes:
+    jobeet-db-data:
